@@ -12,6 +12,7 @@ except ImportError:
 
 from subprocess import Popen, PIPE
 import os
+from PIL import Image
 
 PROG_NAME = 'tesseract'
 TEMP_IMAGE = 'tmp.bmp'
@@ -93,4 +94,5 @@ def mat_to_string(im, lang=None, psm=None):
         return txt
 
 if __name__ =='__main__':
-    print image_to_string("image.jpg", "fra", PSM_AUTO) #Example
+    img = Image.open('image.png').convert('LA').save('greyscale.png')
+    print image_to_string("greyscale.png")
