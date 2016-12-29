@@ -37,3 +37,9 @@ Or give it a mat:
 
     image = cv2.imwrite("myimage.jpg")
     txt = pytesser.mat_to_string(image) 
+    
+    
+
+Improve
+------------
+* convert image image to gray scale before OCR
